@@ -1,0 +1,122 @@
+/* É uma pseudo-classe do css, variáveis globais */
+
+:root{
+    --color-primary: blue;
+    --bg-dark: #141414;
+    --bg-card: #555;
+    --text-color: #fff;
+    --bd-rgba: rgba(0, 0, 0, 0.8);
+    --btn-color: #00ff88;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: var(--bg-dark);
+    color: var(--text-color);
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%; /* 20 px: topo e baixo     5% - esquerda e direita */
+    background: var(--bd-rgba);
+}
+
+.logo{
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.logo span{
+    color: var(--btn-color);
+    padding: 10px;
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+}
+
+nav ul li{
+    padding: 0 15px;
+}
+
+nav ul li a{
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+nav ul li a:hover{
+    color: var(--btn-color);
+}
+
+#container{
+    padding: 40px 15%;
+}
+
+.card{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /*Cria colunas automáticas que se ajustam minimo 250px maximo preenche o espaço com 1fr */
+    gap: 20px;      /* Cria espaço entre os cards */
+    margin-top: 20px;
+}
+
+.card-game{
+    background: var(--bg-card);
+    border-radius: 20px;
+    overflow: hidden; /* Garante que a imagem não saia do card */
+    transition: transform 0.3s ease;
+    border: 2px solid var(--text-color);
+}
+
+.card-game:hover{
+    transform: translateY(-10px);
+    border-color: var(--btn-color);
+}
+
+.card-game img{
+    width: 100%;
+    height: auto;
+}
+
+.card-content{
+    padding: 15px;
+    text-align: center;
+}
+
+.card-content h3{
+    font-size: 1.5rem;
+    color: var(--btn-color);
+    margin-bottom: 20px;
+}
+
+.preco{
+    color: var(--btn-color);
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 10px 0;
+}
+
+.btn-comprar{
+    background: var(--btn-color);
+    color: var(--text-color);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 50%;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.btn-comprar:hover{
+    background: var(--color-primary);
+    color: var(--btn-color);
+    transform: scale(1.2);
+} 
